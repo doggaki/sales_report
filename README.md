@@ -1,6 +1,6 @@
 # Info
 
-I used a dataset from www.kaggle.com called [Supermarket Sales](https://www.kaggle.com/aungpyaeap/supermarket-sales). 
+Using the [Supermarket Sales](https://www.kaggle.com/aungpyaeap/supermarket-sales) dataset from www.kaggle.com  . 
 Analyzed it with R programming language using the [R Markdow](https://rmarkdown.rstudio.com/)  and [Flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/index.html) packages combining data and visualizations in a dashboard.  
 
 ### Needed R packages
