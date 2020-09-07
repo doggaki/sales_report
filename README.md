@@ -10,7 +10,6 @@
 * flexdashboard
 * tidyverse
 * plotly
-* xts
 * lubridate
 * ggplot2
 * dplyr
