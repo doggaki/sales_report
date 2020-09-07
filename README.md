@@ -33,7 +33,7 @@
 ![Dashboard 1 pic](https://github.com/doggaki/sales_report/blob/master/pics/dash_02.jpg)
 
 ## Also the insights 
-The **rmarkdown** package can help us create programmable presentation files from the dataset.
+The **rmarkdown** package can help us create programmable presentation files from the dataset
 ### How to generate the presentation
 1. Place **test.pptx** in root folder
 2. In R Studio import **Presentation.Rmd**
