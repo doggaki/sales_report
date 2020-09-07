@@ -1,7 +1,8 @@
 # Info
 
-Using the [Supermarket Sales](https://www.kaggle.com/aungpyaeap/supermarket-sales) dataset from www.kaggle.com  . 
-Analyzed it with R programming language using the [R Markdow](https://rmarkdown.rstudio.com/)  and [Flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/index.html) packages combining data and visualizations in a dashboard.  
+### Combining data and visualizations in a dashboard
+
+Using the [Supermarket Sales](https://www.kaggle.com/aungpyaeap/supermarket-sales) dataset from www.kaggle.com , the [R Markdow](https://rmarkdown.rstudio.com/)  and [Flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/index.html) packages. 
 
 ### Needed R packages
 * rmarkdown
