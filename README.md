@@ -23,6 +23,8 @@ Analyzed it with R programming language using the [R Markdow](https://rmarkdown.
 * Simple to grasp 
 * Data to insights
 
+![Dashboard 1 pic](https://github.com/doggaki/sales_report/blob/master/pics/dash_01.jpg)
+![Dashboard 1 pic](https://github.com/doggaki/sales_report/blob/master/pics/dash_02.jpg)
 
 ## Also the insights 
 
