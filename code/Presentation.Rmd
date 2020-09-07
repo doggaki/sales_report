@@ -1,0 +1,105 @@
+---
+title: "Sales Insights"
+author: "Michael C. Eleftheriades"
+date: "7/9/2020"
+output:
+  powerpoint_presentation:
+    reference_doc: test.pptx
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Insights:*not just new info but new data to be intepreted*
+
+## Insights
+
+
+
+- Not many purchases per day but  high on gross revenue
+- Balanced distributions
+- Steady sales
+
+
+
+
+## New Data
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(dygraphs)
+options(dplyr.summarise.inform = FALSE)
+library(plotly)
+library(ggplot2)
+library(tidyverse)
+library(ggpubr)
+library(kableExtra)
+library(FRACTION)
+#read sales file
+clients <- read.csv("supermarket_sales.csv")
+sum<-summary(clients$Quantity)
+strDates <- c(clients$Date)
+n<-nrow(clients)
+data_frame <- tibble(strDates)
+df <-data_frame[order(strDates),]
+df2<-c(df)
+#last date - first date = time frame 
+time1 <- as.Date(df2$strDates[1], "%m/%d/%Y")
+time2 <- as.Date(df2$strDates[n], "%m/%d/%Y")
+time_diff<-difftime(time2, time1, units = "days") 
+as_time_1<-as.numeric(time_diff, units = "days")
+#gross
+gross<-cumsum(clients$gross.income)
+total_gross<-gross[length(gross)]
+total_gross<-format(total_gross, digits=6, decimal.mark=",", big.mark= ".")
+#sales
+avg_sales<-n/as_time_1
+avg_sales<-round(avg_sales)
+#dates calculations
+dates <- clients %>%
+  group_by(Date, .drop = FALSE) %>%
+  summarize(Purchases = n()) %>%
+  mutate(Date = lubridate::mdy(Date)) %>%
+  mutate(Date=format(Date,"%d-%m-%Y")) %>%
+  arrange(desc(Purchases))
+
+Dates<-dates$Date
+Dates<-as.Date(dates$Date,"%d-%m-%Y" )
+#per branch insights
+df_branch <- clients %>%
+  group_by(Branch, .drop = FALSE) %>%
+  summarize(Count = n()) %>%
+  mutate(Percentage = (Count / 1000)*100)
+#per product line insights
+prod_line<-clients %>% 
+  group_by(Product.line, .drop= FALSE) %>% 
+  count(Product.line )  %>% 
+  mutate(Percentage = (n / 1000)*100)
+#per gender insights
+df_gender<- clients %>%
+  group_by(Gender, .drop = FALSE) %>%
+  summarize(counts = n()) %>% 
+  mutate(Percentage = (counts / 1000)*100)
+#per payment type insights
+df_type <- clients %>%
+  group_by(Payment, .drop = FALSE) %>%
+  summarize(counts = n()) %>%
+  mutate(Percentage = (counts / 1000)*100)
+#per client type insights
+client_type <- clients %>%
+  group_by(Customer.type, .drop = FALSE) %>%
+  summarize(Customers = n()) %>%
+  mutate(Percentage = (Customers / 1000)*100)
+
+```
+
+- Sales on average  `r avg_sales`  a day but not less than `r min(dates$Purchases)` 
+- Gross revenue of `r round(mean(clients$gross.income))`$  per purchase
+- Balanced Ratios in every aspect:
+
+    *  `r fra.m(mean(df_branch$Percentage)/100)` the sale per branch
+    *  `r fra.m(mean(prod_line$Percentage)/100)` in product line choice per purchase
+    *  `r fra.m(mean(df_gender$Percentage)/100)` if a client it's male or female 
+    *  `r fra.m(mean(client_type$Percentage)/100)` if a client is a member or not
+    *  `r fra.m(mean(df_type$Percentage)/100)` the preferance between payment methods
