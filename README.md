@@ -2,7 +2,7 @@
 
 ### Combining data and visualizations
 
-Using the [Supermarket Sales](https://www.kaggle.com/aungpyaeap/supermarket-sales) dataset from www.kaggle.com , the [R Markdow](https://rmarkdown.rstudio.com/)  and the [Flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/index.html) package to develop a dashboard . 
+The [Supermarket Sales](https://www.kaggle.com/aungpyaeap/supermarket-sales) dataset from www.kaggle.com , the [R Markdow](https://rmarkdown.rstudio.com/)  and the [Flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/index.html) package can create a dashboard . 
 
 ### Needed R packages
 * rmarkdown
