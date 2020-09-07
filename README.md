@@ -2,8 +2,8 @@
 
 ## Combining data and visualizations in a dashboard
 
-## Data
-* The [Supermarket Sales](https://www.kaggle.com/aungpyaeap/supermarket-sales) dataset from www.kaggle.com
+### Data
+* [Supermarket Sales](https://www.kaggle.com/aungpyaeap/supermarket-sales) dataset from www.kaggle.com
 
 ### Needed R packages
 * rmarkdown
