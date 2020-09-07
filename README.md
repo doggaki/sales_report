@@ -14,7 +14,7 @@
 * ggplot2
 * dplyr
 
-### Usage
+### Steps to get it
  1. Place **Info.png** in root folder
  2. In R Studio import **Dashboard_Final.Rmd**
  3. Download dataset and rename it as **supermarket_sales**
