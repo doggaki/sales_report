@@ -1,8 +1,10 @@
 # Info
 
-### Combining data and visualizations
+### Combining data and visualizations in a dashboard
 
-The [Supermarket Sales](https://www.kaggle.com/aungpyaeap/supermarket-sales) dataset from www.kaggle.com , the [R Markdow](https://rmarkdown.rstudio.com/)  and the [Flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/index.html) package can create a dashboard . 
+* The [Supermarket Sales](https://www.kaggle.com/aungpyaeap/supermarket-sales) dataset from www.kaggle.com , 
+* the [R Markdow](https://rmarkdown.rstudio.com/)
+* [Flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/index.html) 
 
 ### Needed R packages
 * rmarkdown
