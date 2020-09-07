@@ -4,6 +4,7 @@ I used a dataset from www.kaggle.com called [Supermarket Sales](https://www.kagg
 Analyzed it with R programming language using the [R Markdow](https://rmarkdown.rstudio.com/)  and [Flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/index.html) packages combining data and visualizations in a dashboard.  
 
 ### Needed R packages
+* rmarkdown
 * flexdashboard
 * tidyverse
 * plotly
@@ -27,7 +28,7 @@ Analyzed it with R programming language using the [R Markdow](https://rmarkdown.
 ![Dashboard 1 pic](https://github.com/doggaki/sales_report/blob/master/pics/dash_02.jpg)
 
 ## Also the insights 
-
+The **rmarkdown** package can help us create programmable presentation files from the dataset.
 ### How to generate the presentation
 1. Place **test.pptx** in root folder
 2. In R Studio import **Presentation.Rmd**
