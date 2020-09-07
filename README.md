@@ -4,10 +4,6 @@
 
 * The [Supermarket Sales](https://www.kaggle.com/aungpyaeap/supermarket-sales) dataset from www.kaggle.com
 
-**R packages**
-* [R Markdow](https://rmarkdown.rstudio.com/)
-* [Flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/index.html) 
-
 ### Needed R packages
 * rmarkdown
 * flexdashboard
