@@ -33,8 +33,6 @@ options(dplyr.summarise.inform = FALSE)
 library(plotly)
 library(ggplot2)
 library(tidyverse)
-library(ggpubr)
-library(kableExtra)
 library(FRACTION)
 #read sales file
 clients <- read.csv("supermarket_sales.csv")
